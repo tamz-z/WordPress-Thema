@@ -1,0 +1,130 @@
+/*
+Theme Name: Mijn Thema
+Author: Jouw naam
+Description: Eigen classic WordPress-thema voor WordPress Custom 1.
+Version: 1.0
+*/
+
+/*
+  UITLEG (les 2 en les 5):
+
+  - Het commentaarblok helemaal bovenaan heet de "theme header".
+    Aan "Theme Name" herkent WordPress dat deze map een thema is.
+  - Een classic thema laadt style.css NIET vanzelf. Dat doet
+    functions.php met wp_enqueue_style() (les 5). WordPress zet de
+    link naar dit bestand dan in de head, via wp_head() in header.php.
+  - In CSS schrijf je commentaar met slash-sterretje, niet met //.
+*/
+
+
+/* ---------- Kleuren op één plek: pas aan voor jouw onderwerp ---------- */
+:root {
+    --kleur-hoofd: #21759b;
+    --kleur-tekst: #222222;
+    --kleur-licht: #f4f6f8;
+    --kleur-rand: #dde3e8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+    color: var(--kleur-tekst);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--kleur-hoofd);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ---------- Header (header.php) ---------- */
+.site-header {
+    background: var(--kleur-hoofd);
+    padding: 16px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.site-title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* wp_nav_menu() maakt een lijst (ul) met links (li > a) */
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* ---------- Inhoud (main in elke template) ---------- */
+.site-main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+/* Berichtkaart op de archiefpagina's */
+.post-card,
+.site-main article {
+    background: var(--kleur-licht);
+    border: 1px solid var(--kleur-rand);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+}
+
+.site-main article h2 {
+    margin-top: 0;
+}
+
+.site-main article h2 a {
+    text-decoration: none;
+}
+
+/* Datum, auteur, categorie en tags in single.php */
+.entry-meta,
+.entry-tags {
+    color: #666666;
+    font-size: 0.9rem;
+}
+
+
+/* ---------- Footer (footer.php) ---------- */
+.site-footer {
+    background: var(--kleur-tekst);
+    color: #ffffff;
+    padding: 24px;
+    text-align: center;
+}
+
+.site-footer a {
+    color: #ffffff;
+}
