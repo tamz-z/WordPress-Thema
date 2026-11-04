@@ -13,12 +13,11 @@ get_header();
 <main class="site-main">
 
     <?php // single_cat_title() = alleen de naam van de categorie, zonder "Categorie:" ervoor ?>
-    <h1>Categorie: <?php single_cat_title(); ?></h1>
+    <h1>Berichten van <?php the_author(); ?> </h1>
 
     <?php
     // category_description() = de beschrijving die je bij
     // Berichten > Categorieën hebt ingevuld (mag ook leeg zijn)
-    echo category_description();
     ?>
 
     <?php if ( have_posts() ) : ?>
