@@ -6,8 +6,7 @@ Version: 1.0
 */
 
 /*
-  UITLEG (les 2 en les 5):
-
+  
   - Het commentaarblok helemaal bovenaan heet de "theme header".
     Aan "Theme Name" herkent WordPress dat deze map een thema is.
   - Een classic thema laadt style.css NIET vanzelf. Dat doet
@@ -19,7 +18,7 @@ Version: 1.0
 
 /* ---------- Kleuren op één plek: pas aan voor jouw onderwerp ---------- */
 :root {
-    --kleur-hoofd: #21759b;
+    --kleur-hoofd: #fa1e0a;
     --kleur-tekst: #222222;
     --kleur-licht: #f4f6f8;
     --kleur-rand: #dde3e8;

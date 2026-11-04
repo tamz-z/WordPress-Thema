@@ -40,6 +40,8 @@ get_header();
                 <?php // the_permalink() = link naar het losse bericht (single.php) ?>
                 <h2>
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    <h1><?php the_author(); ?></h1>
+
                 </h2>
 
                 <?php // the_content() = de inhoud van het bericht ?>
